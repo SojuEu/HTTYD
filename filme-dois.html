@@ -3,9 +3,11 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="color-scheme" content="dark light"><meta name="theme-color" content="#0b0d12">
+	<script>(function(){try{var t=localStorage.getItem("hx-theme")||"auto",d=matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.dataset.bsTheme=t==="auto"?(d?"dark":"light"):t}catch(e){document.documentElement.dataset.bsTheme="dark"}})()</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Como Treinar O Seu Dragão 2</title>
-	<meta name="description" content="Httyd fan site">
+	<title>Como Treinar O Seu Dragão 2 · HTTYD</title>
+	<meta name="description" content="Como Treinar O Seu Dragão 2 — fan site de Como Treinar o Seu Dragão (HTTYD).">
 	<meta name="keywords" content="Dragões, HTTYD, Como Treinar O Seu Dragão, Berk">
 	<meta name="author" content="Júlia Sophia, Sérgio">
 	<link rel="icon" type="image/x-icon" href="img/brasao-dragao.svg">
@@ -24,15 +26,15 @@
 	}
 </style>
 
-<body data-bs-theme="dark" id="inicio-dois">
+<body id="inicio-dois">
 
 	<!-- Início do Nav -->
-	<nav class="navbar navbar-expand-lg bg-dark nav-underline sticky-top">
+	<nav class="navbar navbar-expand-lg sticky-top">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="index.html">
 				<!-- Img da logo no nav -->
 				<img src="img/brasaoberk.svg" style="max-height: 40px;"
-					class="d-inline-block align-text-top img-fluid"></a>
+					class="d-inline-block align-text-top img-fluid" alt="brasaoberk"></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
 				aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -54,12 +56,12 @@
 					<!-- Início do dropdown -->
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
-							aria-expanded="false" style="color: rgb(218, 0, 0);">
+							aria-expanded="false">
 							Filmes
 						</a>
 						<ul class="dropdown-menu">
 							<li><a class="dropdown-item" href="filme-um.html">Como Treinar O Seu Dragão</a></li>
-							<li><a class="dropdown-item" aria-current="page" style="color: rgb(218, 0, 0);"
+							<li><a class="dropdown-item" aria-current="page"
 									href="filme-dois.html">Como Treinar O Seu Dragão 2</a></li>
 							<li><a class="dropdown-item" href="filme-tres.html">Como Treinar O Seu Dragão 3</a></li>
 							<li><a class="dropdown-item" href="filme-live-action.html">Como Treinar O Seu Dragão Live
@@ -150,7 +152,7 @@
 
 			<main class="container-content">
 
-				<img src="img/logo-filme-dois.png" class="img-fluid rounded img-max-heigh2" alt="logo filme dois">
+				<img src="img/logo-filme-dois.png" class="img-fluid rounded img-max-heigh2" alt="logo filme dois" loading="lazy" decoding="async">
 
 				<h2>Sinopse</h2>
 
@@ -178,7 +180,7 @@
 						A mística enervante de Drago arrepia os corações dos vikings mais corajosos - até mesmo Stoico,
 						o Vasto. Assustador em tamanho e comportamento, Drago não tolera aqueles que discordam dele.
 					</q>
-					<img src="img/drago-enemy.jpg" class="img-fluid rounded img-max-heigh2" alt="drago sangue bravo">
+					<img src="img/drago-enemy.jpg" class="img-fluid rounded img-max-heigh2" alt="drago sangue bravo" loading="lazy" decoding="async">
 				</div>
 
 				<p>
@@ -192,19 +194,19 @@
 				<div class="double-side2">
 
 					<img src="img/soluco-poster-filme2.jpg" class="img-fluid rounded img-max-heigh2"
-						alt="postser do soluço">
+						alt="postser do soluço" loading="lazy" decoding="async">
 					<img src="img/astrid-poster-filme2.webp" class="img-fluid rounded img-max-heigh2"
-						alt="poster da astrid">
+						alt="poster da astrid" loading="lazy" decoding="async">
 					<img src="img/melequento-poster-filme2.jpeg" class="img-fluid rounded img-max-heigh2"
-						alt="poster do melequento">
+						alt="poster do melequento" loading="lazy" decoding="async">
 					<img src="img/perna-de-peixe-poster-filme2.webp" class="img-fluid rounded img-max-heigh2"
-						alt="poster do perna-de-peixe">
+						alt="poster do perna-de-peixe" loading="lazy" decoding="async">
 					<img src="img/gemeos-poster-filme2.webp" class="img-fluid rounded img-max-heigh2"
-						alt="poster dos gemeos">
+						alt="poster dos gemeos" loading="lazy" decoding="async">
 					<img src="img/valka-poster-httyd2.webp" class="img-fluid rounded img-max-heigh2"
-						alt="poster da valka">
+						alt="poster da valka" loading="lazy" decoding="async">
 					<img src="img/stoio-poster-filme2.jpeg" class="img-fluid rounded img-max-heigh2"
-						alt="poster do stoio">
+						alt="poster do stoio" loading="lazy" decoding="async">
 
 				</div>
 
@@ -221,7 +223,7 @@
 
 	<footer>
 		<a class="icon-link icon-link-hover link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-			style="--bs-link-hover-color-rgb: 25, 135, 84;" href="#inicio-dois">
+			style="--bs-link-hover-color-rgb: 25, 135, 84;" href="#">
 			Voltar ao início
 			<svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true">
 				<path
@@ -231,8 +233,9 @@
 		<p>Copyright &copy; Soju e Bacana 2025.</p>
 	</footer>
 
-	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/javascript.js"></script>
+	<script src="js/bootstrap.bundle.min.js" defer></script>
+	<script src="js/dragons.js" defer></script>
+	<script src="js/site.js" defer></script>
 
 </body>
 

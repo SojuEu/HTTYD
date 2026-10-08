@@ -3,9 +3,11 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="color-scheme" content="dark light"><meta name="theme-color" content="#0b0d12">
+	<script>(function(){try{var t=localStorage.getItem("hx-theme")||"auto",d=matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.dataset.bsTheme=t==="auto"?(d?"dark":"light"):t}catch(e){document.documentElement.dataset.bsTheme="dark"}})()</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Sharp</title>
-	<meta name="description" content="Free Web tutorials">
+	<title>Dragões: Corrida Até O Limite · HTTYD</title>
+	<meta name="description" content="Dragões: Corrida Até O Limite — fan site de Como Treinar o Seu Dragão (HTTYD).">
 	<meta name="keywords" content="Dragões, HTTYD, Como Treinar O Seu Dragão, Berk">
 	<meta name="author" content="Júlia Sophia, Sérgio">
 	<link rel="icon" type="image/x-icon" href="img/brasao-dragao.svg">
@@ -24,15 +26,15 @@
 	}
 </style>
 
-<body data-bs-theme="dark">
+<body>
 
 	<!-- Início do Nav -->
-	<nav class="navbar navbar-expand-lg bg-dark nav-underline sticky-top">
+	<nav class="navbar navbar-expand-lg sticky-top">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="index.html">
 				<!-- Img da logo no nav -->
 				<img src="img/brasaoberk.svg" style="max-height: 40px;"
-					class="d-inline-block align-text-top img-fluid"></a>
+					class="d-inline-block align-text-top img-fluid" alt="brasaoberk"></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
 				aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -68,7 +70,7 @@
 					<!-- Fim do dropdown -->
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
-							aria-expanded="false" style="color: rgb(218, 0, 0);">
+							aria-expanded="false">
 							Classes
 						</a>
 						<ul class="dropdown-menu">
@@ -85,7 +87,7 @@
 								</a>
 							</li>
 							<li>
-								<a class="dropdown-item" aria-current="page" style="color: rgb(218, 0, 0);"
+								<a class="dropdown-item" aria-current="page"
 									href="sharp-class.html">
 									<img src="img/sharp-class-img.svg" class="img-fluid small" alt="Classe Sharp"> Sharp
 								</a>
@@ -144,7 +146,7 @@
 			</nav>
 
 			<header class="head-container">
-				<img src="img/sharptop.webp" class="img-fluid rounded" alt="">
+				<img src="img/sharptop.webp" class="img-fluid rounded" alt="sharptop" loading="lazy" decoding="async">
 
 				<h4 style="padding: 30px;">Dragões da Classe Afiada são vaidosos e orgulhosos, e todos possuem partes
 					afiadas
@@ -159,7 +161,7 @@
 				<div class="row align-items-stretch mb-3">
 					<div class="col-md-5 d-flex flex-column">
 						<div class="card flex-fill rounded-0">
-							<img src="img/cortatempetadecard.webp" class="card-img-top img-fluid" alt="...">
+							<img src="img/cortatempetadecard.webp" class="card-img-top img-fluid" alt="Corta Tormentas" loading="lazy" decoding="async">
 							<div class="card-body">
 								<h5 class="card-title">Corta Tormentas</h5>
 								<q class="card-text">Os Corta Tormentas são bem conhecidos por seu segundo par de
@@ -181,16 +183,16 @@
 							</div>
 							<div class="carousel-inner h-100">
 								<div class="carousel-item active h-100">
-									<img src="img/stormcutter1.jpg" class="d-block w-100 h-100 object-fit-cover"
-										alt="...">
+									<img src="img/Stormcutter1.jpg" class="d-block w-100 h-100 object-fit-cover"
+									 alt="Corta Tormentas" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
-									<img src="img/stormcutter2.webp" class="d-block w-100 h-100 object-fit-cover"
-										alt="...">
+									<img src="img/Stormcutter2.webp" class="d-block w-100 h-100 object-fit-cover"
+									 alt="Corta Tormentas" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
 									<img src="img/corta-tormenta-um.jpg" class="d-block w-100 h-100 object-fit-cover"
-										alt="...">
+									 alt="Corta Tormentas" loading="lazy" decoding="async">
 								</div>
 							</div>
 							<button class="carousel-control-prev" type="button" data-bs-target="#tormenta"
@@ -209,27 +211,27 @@
 						<div class="col-12">
 							<div class="d-flex flex-wrap justify-content-center">
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto012()">Ocultar</button>
+									data-panel="tex12" data-view="hide" aria-pressed="false">Ocultar</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto34()">Descrição</button>
+									data-panel="tex12" data-view="desc" aria-pressed="false">Descrição</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto35()">Características</button>
+									data-panel="tex12" data-view="feat" aria-pressed="false">Características</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto36()">Habilidades</button>
+									data-panel="tex12" data-view="abil" aria-pressed="false">Habilidades</button>
 								<button type="button" class="btn btn-danger rounded-0"
-									onclick="mostrarTextoAlert12()">PERIGO:
+									data-panel="tex12" data-view="alert" aria-pressed="false">PERIGO:
 									MORTAL</button>
 							</div>
 							<div class="mt-4">
-								<div id="tex12" class="fs-5"></div>
+								<div id="tex12" class="hx-panel fs-5" aria-live="polite"></div>
 							</div>
 						</div>
 					</div>
-					<div class="accordion w-100" id="accordionExample" data-bs-theme="dark">
+					<div class="accordion w-100" id="accordionExample">
 						<div class="row mt-5">
 							<div class="col-12">
 								<h3 class="text-center mb-3">Aparições:</h3>
-								<div class="accordion rounded-0" id="accordionExample" data-bs-theme="dark">
+								<div class="accordion rounded-0" id="accordionExample-2">
 									<div class="accordion-item rounded-0">
 										<h2 class="accordion-header">
 											<button class="accordion-button collapsed rounded-0" type="button"
@@ -289,7 +291,7 @@
 				<div class="row align-items-stretch mb-3">
 					<div class="col-md-4 d-flex flex-column">
 						<div class="card flex-fill rounded-0">
-							<img src="img/razorwhip.webp" class="card-img-top img-fluid" alt="...">
+							<img src="img/razorwhip.webp" class="card-img-top img-fluid" alt="Chicote Cortante" loading="lazy" decoding="async">
 							<div class="card-body">
 								<h5 class="card-title">Chicote Cortante</h5>
 								<q class="card-text">Chicote Navalha. Dragão da classe Afiado. Cauda longa,
@@ -316,14 +318,14 @@
 							<div class="carousel-inner h-100">
 								<div class="carousel-item active h-100">
 									<img src="img/chicote-cortante-um.jpg" class="d-block w-100 h-100 object-fit-cover"
-										alt="...">
+									 alt="Chicote Cortante" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
 									<img src="img/chicote-cortante-dois.jpeg"
-										class="d-block w-100 h-100 object-fit-cover" alt="...">
+										class="d-block w-100 h-100 object-fit-cover" alt="Chicote Cortante" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
-									<img src="img/razor3.jpg" class="d-block w-100 h-100 object-fit-cover" alt="...">
+									<img src="img/razor3.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Chicote Cortante" loading="lazy" decoding="async">
 								</div>
 							</div>
 							<button class="carousel-control-prev" type="button" data-bs-target="#chicote"
@@ -342,27 +344,27 @@
 						<div class="col-12">
 							<div class="d-flex flex-wrap justify-content-center">
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto01()">Ocultar</button>
+									data-panel="tex1" data-view="hide" aria-pressed="false">Ocultar</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto1()">Descrição</button>
+									data-panel="tex1" data-view="desc" aria-pressed="false">Descrição</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto2()">Características</button>
+									data-panel="tex1" data-view="feat" aria-pressed="false">Características</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto3()">Habilidades</button>
+									data-panel="tex1" data-view="abil" aria-pressed="false">Habilidades</button>
 								<button type="button" class="btn btn-danger rounded-0"
-									onclick="mostrarTextoAlert1()">PERIGO:
+									data-panel="tex1" data-view="alert" aria-pressed="false">PERIGO:
 									MORTAL</button>
 							</div>
 							<div class="mt-4">
-								<div id="tex1" class="fs-5"></div>
+								<div id="tex1" class="hx-panel fs-5" aria-live="polite"></div>
 							</div>
 						</div>
 					</div>
-					<div class="accordion w-100" id="accordionExample" data-bs-theme="dark">
+					<div class="accordion w-100" id="accordionExample-3">
 						<div class="row mt-5">
 							<div class="col-12">
 								<h3 class="text-center mb-3">Aparições:</h3>
-								<div class="accordion rounded-0" id="accordionExample" data-bs-theme="dark">
+								<div class="accordion rounded-0" id="accordionExample-4">
 									<div class="accordion-item rounded-0">
 										<h2 class="accordion-header">
 											<button class="accordion-button collapsed rounded-0" type="button"
@@ -468,7 +470,7 @@
 				<div class="row align-items-stretch mb-3">
 					<div class="col-md-4 d-flex flex-column">
 						<div class="card flex-fill rounded-0">
-							<img src="img/picada.webp" class="card-img-top img-fluid" alt="...">
+							<img src="img/picada.webp" class="card-img-top img-fluid" alt="Picada Veloz" loading="lazy" decoding="async">
 							<div class="card-body">
 								<h5 class="card-title">
 									<h5 class="card-title">Picada Veloz</h5>
@@ -496,13 +498,13 @@
 							</div>
 							<div class="carousel-inner h-100">
 								<div class="carousel-item active h-100">
-									<img src="img/picada1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="...">
+									<img src="img/picada1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Picada Veloz" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
-									<img src="img/picada2.webp" class="d-block w-100 h-100 object-fit-cover" alt="...">
+									<img src="img/picada2.webp" class="d-block w-100 h-100 object-fit-cover" alt="Picada Veloz" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
-									<img src="img/picada3.webp" class="d-block w-100 h-100 object-fit-cover" alt="...">
+									<img src="img/picada3.webp" class="d-block w-100 h-100 object-fit-cover" alt="Picada Veloz" loading="lazy" decoding="async">
 								</div>
 							</div>
 							<button class="carousel-control-prev" type="button" data-bs-target="#picada"
@@ -521,27 +523,27 @@
 						<div class="col-12">
 							<div class="d-flex flex-wrap justify-content-center">
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto013()">Ocultar</button>
+									data-panel="tex13" data-view="hide" aria-pressed="false">Ocultar</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto37()">Descrição</button>
+									data-panel="tex13" data-view="desc" aria-pressed="false">Descrição</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto38()">Características</button>
+									data-panel="tex13" data-view="feat" aria-pressed="false">Características</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto39()">Habilidades</button>
+									data-panel="tex13" data-view="abil" aria-pressed="false">Habilidades</button>
 								<button type="button" class="btn btn-danger rounded-0"
-									onclick="mostrarTextoAlert13()">PERIGO:
+									data-panel="tex13" data-view="alert" aria-pressed="false">PERIGO:
 									MORTAL</button>
 							</div>
 							<div class="mt-4">
-								<div id="tex13" class="fs-5"></div>
+								<div id="tex13" class="hx-panel fs-5" aria-live="polite"></div>
 							</div>
 						</div>
 					</div>
-					<div class="accordion w-100" id="accordionExample" data-bs-theme="dark">
+					<div class="accordion w-100" id="accordionExample-5">
 						<div class="row mt-5">
 							<div class="col-12">
 								<h3 class="text-center mb-3">Aparições:</h3>
-								<div class="accordion rounded-0" id="accordionExample" data-bs-theme="dark">
+								<div class="accordion rounded-0" id="accordionExample-6">
 									<div class="accordion-item rounded-0">
 										<h2 class="accordion-header">
 											<button class="accordion-button collapsed rounded-0" type="button"
@@ -744,7 +746,7 @@
 				<div class="row align-items-stretch mb-3">
 					<div class="col-md-4 d-flex flex-column">
 						<div class="card flex-fill rounded-0">
-							<img src="img/machadragocard.webp" class="card-img-top img-fluid" alt="...">
+							<img src="img/machadragocard.webp" class="card-img-top img-fluid" alt="Machadrago" loading="lazy" decoding="async">
 							<div class="card-body">
 								<h5 class="card-title">Machadrago</h5>
 								<q class="card-text">Machadrago. Esta criatura gigantesca tem asas afiadas que podem
@@ -769,19 +771,19 @@
 							<div class="carousel-inner h-100">
 								<div class="carousel-item active h-100">
 									<img src="img/machadrago1.jpg" class="d-block w-100 h-100 object-fit-cover"
-										alt="...">
+									 alt="Machadrago" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
 									<img src="img/machadrago2.jpg" class="d-block w-100 h-100 object-fit-cover"
-										alt="...">
+									 alt="Machadrago" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
 									<img src="img/machadrago4.webp" class="d-block w-100 h-100 object-fit-cover"
-										alt="...">
+									 alt="Machadrago" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
 									<img src="img/machadrago5.webp" class="d-block w-100 h-100 object-fit-cover"
-										alt="...">
+									 alt="Machadrago" loading="lazy" decoding="async">
 								</div>
 							</div>
 							<button class="carousel-control-prev" type="button" data-bs-target="#machado"
@@ -800,26 +802,26 @@
 						<div class="col-12">
 							<div class="d-flex flex-wrap justify-content-center">
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto014()">Ocultar</button>
+									data-panel="tex14" data-view="hide" aria-pressed="false">Ocultar</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto40()">Descrição</button>
+									data-panel="tex14" data-view="desc" aria-pressed="false">Descrição</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto41()">Características</button>
+									data-panel="tex14" data-view="feat" aria-pressed="false">Características</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto42()">Habilidades</button>
+									data-panel="tex14" data-view="abil" aria-pressed="false">Habilidades</button>
 								<button type="button" class="btn btn-danger rounded-0"
-									onclick="mostrarTextoAlert14()">PERIGO:
+									data-panel="tex14" data-view="alert" aria-pressed="false">PERIGO:
 							</div>
 							<div class="mt-4">
-								<div id="tex14" class="fs-5"></div>
+								<div id="tex14" class="hx-panel fs-5" aria-live="polite"></div>
 							</div>
 						</div>
 					</div>
-					<div class="accordion w-100" id="accordionExample" data-bs-theme="dark">
+					<div class="accordion w-100" id="accordionExample-7">
 						<div class="row mt-5">
 							<div class="col-12">
 								<h3 class="text-center mb-3">Aparições:</h3>
-								<div class="accordion rounded-0" id="accordionExample" data-bs-theme="dark">
+								<div class="accordion rounded-0" id="accordionExample-8">
 									<div class="accordion-item rounded-0">
 										<h2 class="accordion-header">
 											<button class="accordion-button collapsed rounded-0" type="button"
@@ -882,7 +884,7 @@
 				<div class="row align-items-stretch mb-3">
 					<div class="col-md-5 d-flex flex-column">
 						<div class="card flex-fill rounded-0">
-							<img src="img/naddercard.webp" class="card-img-top img-fluid" alt="...">
+							<img src="img/naddercard.webp" class="card-img-top img-fluid" alt="Nadder Mortal" loading="lazy" decoding="async">
 							<div class="card-body">
 								<h5 class="card-title">Nadder Mortal</h5>
 								<q class="card-text">Heather : " O Nadder Mortal. Espinhos penetrantes, leal,
@@ -906,16 +908,16 @@
 							</div>
 							<div class="carousel-inner h-100">
 								<div class="carousel-item active h-100">
-									<img src="img/nadder4.png" class="d-block w-100 h-100 object-fit-cover" alt="...">
+									<img src="img/nadder4.png" class="d-block w-100 h-100 object-fit-cover" alt="Nadder Mortal" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
-									<img src="img/nadder2.webp" class="d-block w-100 h-100 object-fit-cover" alt="...">
+									<img src="img/nadder2.webp" class="d-block w-100 h-100 object-fit-cover" alt="Nadder Mortal" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
-									<img src="img/nadder3.jpg" class="d-block w-100 h-100 object-fit-cover" alt="...">
+									<img src="img/nadder3.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Nadder Mortal" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
-									<img src="img/nadder1.webp" class="d-block w-100 h-100 object-fit-cover" alt="...">
+									<img src="img/nadder1.webp" class="d-block w-100 h-100 object-fit-cover" alt="Nadder Mortal" loading="lazy" decoding="async">
 								</div>
 							</div>
 							<button class="carousel-control-prev" type="button" data-bs-target="#nadder"
@@ -934,23 +936,23 @@
 						<div class="col-12">
 							<div class="d-flex flex-wrap justify-content-center">
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto015()">Ocultar</button>
+									data-panel="tex15" data-view="hide" aria-pressed="false">Ocultar</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto43()">Descrição</button>
+									data-panel="tex15" data-view="desc" aria-pressed="false">Descrição</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto44()">Características</button>
+									data-panel="tex15" data-view="feat" aria-pressed="false">Características</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto45()">Habilidades</button>
+									data-panel="tex15" data-view="abil" aria-pressed="false">Habilidades</button>
 								<button type="button" class="btn btn-danger rounded-0"
-									onclick="mostrarTextoAlert15()">PERIGO:
+									data-panel="tex15" data-view="alert" aria-pressed="false">PERIGO:
 									MORTAL</button>
 							</div>
 							<div class="mt-4">
-								<div id="tex15" class="fs-5"></div>
+								<div id="tex15" class="hx-panel fs-5" aria-live="polite"></div>
 							</div>
 						</div>
 					</div>
-					<div class="accordion w-100" id="accordionExample" data-bs-theme="dark">
+					<div class="accordion w-100" id="accordionExample-9">
 						<div class="row mt-5">
 							<div class="col-12">
 								<h3 class="text-center mb-3">Aparições: Todos os episódios e filmes</h3>
@@ -966,7 +968,7 @@
 
 <footer>
 	<a class="icon-link icon-link-hover link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-		style="--bs-link-hover-color-rgb: 25, 135, 84;" href="#inicio-race">
+		style="--bs-link-hover-color-rgb: 25, 135, 84;" href="#">
 		Voltar ao início
 		<svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true">
 			<path
@@ -976,8 +978,9 @@
 	<p>Copyright &copy; Soju e Bacana 2025.</p>
 </footer>
 
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/javascript.js"></script>
+<script src="js/bootstrap.bundle.min.js" defer></script>
+<script src="js/dragons.js" defer></script>
+	<script src="js/site.js" defer></script>
 
 <!-- https://ping-xiong.github.io/Dragons-Race-to-the-Edge-Interactive-Map-Backup/#/map -->
 </body>

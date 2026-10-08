@@ -3,9 +3,11 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="color-scheme" content="dark light"><meta name="theme-color" content="#0b0d12">
+	<script>(function(){try{var t=localStorage.getItem("hx-theme")||"auto",d=matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.dataset.bsTheme=t==="auto"?(d?"dark":"light"):t}catch(e){document.documentElement.dataset.bsTheme="dark"}})()</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Como Treinar O Seu Dragão</title>
-	<meta name="description" content="Free Web tutorials">
+	<title>Dragões: Corrida Até O Limite · HTTYD</title>
+	<meta name="description" content="Dragões: Corrida Até O Limite — fan site de Como Treinar o Seu Dragão (HTTYD).">
 	<meta name="keywords" content="Dragões, HTTYD, Como Treinar O Seu Dragão, Berk">
 	<meta name="author" content="Júlia Sophia, Sérgio">
 	<link rel="icon" type="image/x-icon" href="img/brasao-dragao.svg">
@@ -24,15 +26,15 @@
 	}
 </style>
 
-<body data-bs-theme="dark">
+<body>
 
 	<!-- Início do Nav -->
-	<nav class="navbar navbar-expand-lg bg-dark nav-underline sticky-top">
+	<nav class="navbar navbar-expand-lg sticky-top">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="index.html">
 				<!-- Img da logo no nav -->
 				<img src="img/brasaoberk.svg" style="max-height: 40px;"
-					class="d-inline-block align-text-top img-fluid"></a>
+					class="d-inline-block align-text-top img-fluid" alt="brasaoberk"></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
 				aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -68,7 +70,7 @@
 					<!-- Fim do dropdown -->
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
-							aria-expanded="false" style="color: rgb(218, 0, 0);">
+							aria-expanded="false">
 							Classes
 						</a>
 						<ul class="dropdown-menu">
@@ -107,7 +109,7 @@
 								</a>
 							</li>
 							<li>
-								<a class="dropdown-item" aria-current="page" style="color: rgb(218, 0, 0);"
+								<a class="dropdown-item" aria-current="page"
 									href="tracker-class.html">
 									<img src="img/tracker-img-bg.svg" class="img-fluid small" alt="Classe Tracker">
 									Tracker
@@ -145,7 +147,7 @@
 			</nav>
 
 			<header class="head-container">
-				<img src="img/trakertop.webp" class="img-fluid rounded" alt="">
+				<img src="img/trakertop.webp" class="img-fluid rounded" alt="trakertop" loading="lazy" decoding="async">
 
 				<h4>A Classe Rastreador é a mais nova classe de dragões, descoberta durante os eventos de Corrida até o
 					Limite . Caçadores natos, os dragões da Classe Rastreador possuem olfato e paladar apurados, o que
@@ -156,7 +158,7 @@
 				<div class="row align-items-stretch mb-3">
 					<div class="col-md-5 d-flex flex-column">
 						<div class="card flex-fill rounded-0">
-							<img src="img/rumblehorn.webp" class="card-img-top img-fluid" alt="...">
+							<img src="img/rumblehorn.webp" class="card-img-top img-fluid" alt="Rumblehorn" loading="lazy" decoding="async">
 							<div class="card-body">
 								<h5 class="card-title">Rumblehorn</h5>
 								<q class="card-text"> Rumblehorns disparam projéteis de fogo de longo alcance que
@@ -179,15 +181,15 @@
 							<div class="carousel-inner h-100">
 								<div class="carousel-item active h-100">
 									<img src="img/rumblehornart.jpg" class="d-block w-100 h-100 object-fit-cover"
-										alt="...">
+									 alt="Rumblehorn" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
 									<img src="img/rumblehorn2.webp" class="d-block w-100 h-100 object-fit-cover"
-										alt="...">
+									 alt="Rumblehorn" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
 									<img src="img/rumblehorn1.jpg" class="d-block w-100 h-100 object-fit-cover"
-										alt="...">
+									 alt="Rumblehorn" loading="lazy" decoding="async">
 								</div>
 							</div>
 							<button class="carousel-control-prev" type="button"
@@ -206,27 +208,27 @@
 						<div class="col-12">
 							<div class="d-flex flex-wrap justify-content-center">
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto031()">Ocultar</button>
+									data-panel="tex31" data-view="hide" aria-pressed="false">Ocultar</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto88()">Descrição</button>
+									data-panel="tex31" data-view="desc" aria-pressed="false">Descrição</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto89()">Características</button>
+									data-panel="tex31" data-view="feat" aria-pressed="false">Características</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto90()">Habilidades</button>
+									data-panel="tex31" data-view="abil" aria-pressed="false">Habilidades</button>
 								<button type="button" class="btn btn-danger rounded-0"
-									onclick="mostrarTextoAlert31()">PERIGO:
+									data-panel="tex31" data-view="alert" aria-pressed="false">PERIGO:
 									MORTAL</button>
 							</div>
 							<div class="mt-4">
-								<div id="tex31" class="fs-5"></div>
+								<div id="tex31" class="hx-panel fs-5" aria-live="polite"></div>
 							</div>
 						</div>
 					</div>
-					<div class="accordion w-100" id="accordionExample" data-bs-theme="dark">
+					<div class="accordion w-100" id="accordionExample">
 						<div class="row mt-5">
 							<div class="col-12">
 								<h3 class="text-center mb-3">Aparições:</h3>
-								<div class="accordion rounded-0" id="accordionExample" data-bs-theme="dark">
+								<div class="accordion rounded-0" id="accordionExample-2">
 									<div class="accordion-item rounded-0">
 										<h2 class="accordion-header">
 											<button class="accordion-button collapsed rounded-0" type="button"
@@ -352,7 +354,7 @@
 				<div class="row align-items-stretch mb-3">
 					<div class="col-md-5 d-flex flex-column">
 						<div class="card flex-fill rounded-0">
-							<img src="img/hideouszippleback.webp" class="card-img-top img-fluid" alt="...">
+							<img src="img/hideouszippleback.webp" class="card-img-top img-fluid" alt="Zíperarrepiante" loading="lazy" decoding="async">
 							<div class="card-body">
 								<h5 class="card-title">Zíperarrepiante</h5>
 								<q class="card-text">Um Zippleback? Exótico. Duas cabeças, o dobro de status.</q>
@@ -373,15 +375,15 @@
 							<div class="carousel-inner h-100">
 								<div class="carousel-item active h-100">
 									<img src="img/hideouszipplebackart.jpg" class="d-block w-100 h-100 object-fit-cover"
-										alt="...">
+									 alt="Zíperarrepiante" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
 									<img src="img/hideouszippleback1.jpg" class="d-block w-100 h-100 object-fit-cover"
-										alt="...">
+									 alt="Zíperarrepiante" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
 									<img src="img/hideouszippleback2.jpg" class="d-block w-100 h-100 object-fit-cover"
-										alt="...">
+									 alt="Zíperarrepiante" loading="lazy" decoding="async">
 								</div>
 							</div>
 							<button class="carousel-control-prev" type="button" data-bs-target="#rubro"
@@ -400,23 +402,23 @@
 						<div class="col-12">
 							<div class="d-flex flex-wrap justify-content-center">
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto032()">Ocultar</button>
+									data-panel="tex32" data-view="hide" aria-pressed="false">Ocultar</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto91()">Descrição</button>
+									data-panel="tex32" data-view="desc" aria-pressed="false">Descrição</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto92()">Características</button>
+									data-panel="tex32" data-view="feat" aria-pressed="false">Características</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto93()">Habilidades</button>
+									data-panel="tex32" data-view="abil" aria-pressed="false">Habilidades</button>
 								<button type="button" class="btn btn-danger rounded-0"
-									onclick="mostrarTextoAlert32()">PERIGO:
+									data-panel="tex32" data-view="alert" aria-pressed="false">PERIGO:
 									MORTAL</button>
 							</div>
 							<div class="mt-4">
-								<div id="tex32" class="fs-5"></div>
+								<div id="tex32" class="hx-panel fs-5" aria-live="polite"></div>
 							</div>
 						</div>
 					</div>
-					<div class="accordion w-100" id="accordionExample" data-bs-theme="dark">
+					<div class="accordion w-100" id="accordionExample-3">
 						<div class="row mt-5">
 							<div class="col-12">
 								<h3 class="text-center mb-3">Aparições: Todos os episódios e filmes</h3>
@@ -442,8 +444,9 @@
 		<p>Copyright &copy; Soju e Bacana 2025.</p>
 	</footer>
 
-	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/javascript.js"></script>
+	<script src="js/bootstrap.bundle.min.js" defer></script>
+	<script src="js/dragons.js" defer></script>
+	<script src="js/site.js" defer></script>
 
 	<!-- https://ping-xiong.github.io/Dragons-Race-to-the-Edge-Interactive-Map-Backup/#/map -->
 </body>

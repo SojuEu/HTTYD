@@ -3,9 +3,11 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="color-scheme" content="dark light"><meta name="theme-color" content="#0b0d12">
+	<script>(function(){try{var t=localStorage.getItem("hx-theme")||"auto",d=matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.dataset.bsTheme=t==="auto"?(d?"dark":"light"):t}catch(e){document.documentElement.dataset.bsTheme="dark"}})()</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Stoker</title>
-	<meta name="description" content="Free Web tutorials">
+	<title>Dragões: Corrida Até O Limite · HTTYD</title>
+	<meta name="description" content="Dragões: Corrida Até O Limite — fan site de Como Treinar o Seu Dragão (HTTYD).">
 	<meta name="keywords" content="Dragões, HTTYD, Como Treinar O Seu Dragão, Berk">
 	<meta name="author" content="Júlia Sophia, Sérgio">
 	<link rel="icon" type="image/x-icon" href="img/brasao-dragao.svg">
@@ -24,15 +26,15 @@
 	}
 </style>
 
-<body data-bs-theme="dark">
+<body>
 
 	<!-- Início do Nav -->
-	<nav class="navbar navbar-expand-lg bg-dark nav-underline sticky-top">
+	<nav class="navbar navbar-expand-lg sticky-top">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="index.html">
 				<!-- Img da logo no nav -->
 				<img src="img/brasaoberk.svg" style="max-height: 40px;"
-					class="d-inline-block align-text-top img-fluid"></a>
+					class="d-inline-block align-text-top img-fluid" alt="brasaoberk"></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
 				aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -68,7 +70,7 @@
 					<!-- Fim do dropdown -->
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
-							aria-expanded="false" style="color: rgb(218, 0, 0);">
+							aria-expanded="false">
 							Classes
 						</a>
 						<ul class="dropdown-menu">
@@ -90,7 +92,7 @@
 								</a>
 							</li>
 							<li>
-								<a class="dropdown-item" aria-current="page" style="color: rgb(218, 0, 0);"
+								<a class="dropdown-item" aria-current="page"
 									href="stoker-class.html">
 									<img src="img/stoker-class-img.png" class="img-fluid small" alt="Classe Stoker">
 									Stoker
@@ -144,7 +146,7 @@
 			</nav>
 
 			<header class="head-container">
-				<img src="img/stokertop.webp" class="img-fluid rounded" alt="">
+				<img src="img/stokertop.webp" class="img-fluid rounded" alt="stokertop" loading="lazy" decoding="async">
 
 				<h4>Dragões da Classe Stoker são cuspidores de fogo impetuosos. Uma característica
 					notável desses dragões é seu alto limite de disparo e poder de fogo. Alguns deles são capazes de
@@ -159,7 +161,7 @@
 				<div class="row align-items-stretch mb-3">
 					<div class="col-md-5 d-flex flex-column">
 						<div class="card flex-fill rounded-0">
-							<img src="img/pesadelocard.webp" class="card-img-top img-fluid" alt="...">
+							<img src="img/pesadelocard.webp" class="card-img-top img-fluid" alt="Pesadelo Monstruoso" loading="lazy" decoding="async">
 							<div class="card-body">
 								<h5 class="card-title">Pesadelo Monstruoso</h5>
 								<q class="card-text">E então, temos o Pesadelo Monstruoso. Só os melhores vikings
@@ -181,14 +183,14 @@
 							</div>
 							<div class="carousel-inner h-100">
 								<div class="carousel-item active h-100">
-									<img src="img/pesadelo1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="...">
+									<img src="img/pesadelo1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Pesadelo Monstruoso" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
-									<img src="img/pesadelo2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="...">
+									<img src="img/pesadelo2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Pesadelo Monstruoso" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
 									<img src="img/pesadelo3.webp" class="d-block w-100 h-100 object-fit-cover"
-										alt="...">
+									 alt="Pesadelo Monstruoso" loading="lazy" decoding="async">
 								</div>
 							</div>
 							<button class="carousel-control-prev" type="button" data-bs-target="#tormenta"
@@ -207,19 +209,19 @@
 						<div class="col-12">
 							<div class="d-flex flex-wrap justify-content-center">
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto016()">Ocultar</button>
+									data-panel="tex16" data-view="hide" aria-pressed="false">Ocultar</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto46()">Descrição</button>
+									data-panel="tex16" data-view="desc" aria-pressed="false">Descrição</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto47()">Características</button>
+									data-panel="tex16" data-view="feat" aria-pressed="false">Características</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto48()">Habilidades</button>
+									data-panel="tex16" data-view="abil" aria-pressed="false">Habilidades</button>
 								<button type="button" class="btn btn-danger rounded-0"
-									onclick="mostrarTextoAlert16()">PERIGO:
+									data-panel="tex16" data-view="alert" aria-pressed="false">PERIGO:
 									MORTAL</button>
 							</div>
 							<div class="mt-4">
-								<div id="tex16" class="fs-5"></div>
+								<div id="tex16" class="hx-panel fs-5" aria-live="polite"></div>
 							</div>
 						</div>
 					</div>
@@ -231,7 +233,7 @@
 				<div class="row align-items-stretch mb-3">
 					<div class="col-md-7 d-flex flex-column">
 						<div class="card flex-fill rounded-0">
-							<img src="img/terrorcard1.webp" class="card-img-top img-fluid" alt="...">
+							<img src="img/terrorcard1.webp" class="card-img-top img-fluid" alt="Terror Norturno" loading="lazy" decoding="async">
 							<div class="card-body">
 								<h5 class="card-title">Terror Norturno</h5>
 								<q class="card-text">Não é um dragão grande, são vários pequenos!</q>
@@ -253,16 +255,16 @@
 							</div>
 							<div class="carousel-inner h-100">
 								<div class="carousel-item active h-100">
-									<img src="img/terrorart.png" class="d-block w-100 h-100 object-fit-cover" alt="...">
+									<img src="img/terrorart.png" class="d-block w-100 h-100 object-fit-cover" alt="Terror Norturno" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
-									<img src="img/terror4.webp" class="d-block w-100 h-100 object-fit-cover" alt="...">
+									<img src="img/terror4.webp" class="d-block w-100 h-100 object-fit-cover" alt="Terror Norturno" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
-									<img src="img/terror2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="...">
+									<img src="img/terror2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Terror Norturno" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
-									<img src="img/terror1.webp" class="d-block w-100 h-100 object-fit-cover" alt="...">
+									<img src="img/terror1.webp" class="d-block w-100 h-100 object-fit-cover" alt="Terror Norturno" loading="lazy" decoding="async">
 								</div>
 							</div>
 							<button class="carousel-control-prev" type="button" data-bs-target="#chicote"
@@ -281,27 +283,27 @@
 						<div class="col-12">
 							<div class="d-flex flex-wrap justify-content-center">
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto017()">Ocultar</button>
+									data-panel="tex17" data-view="hide" aria-pressed="false">Ocultar</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto49()">Descrição</button>
+									data-panel="tex17" data-view="desc" aria-pressed="false">Descrição</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto50()">Características</button>
+									data-panel="tex17" data-view="feat" aria-pressed="false">Características</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto51()">Habilidades</button>
+									data-panel="tex17" data-view="abil" aria-pressed="false">Habilidades</button>
 								<button type="button" class="btn btn-danger rounded-0"
-									onclick="mostrarTextoAlert17()">PERIGO:
+									data-panel="tex17" data-view="alert" aria-pressed="false">PERIGO:
 									MORTAL</button>
 							</div>
 							<div class="mt-4">
-								<div id="tex17" class="fs-5"></div>
+								<div id="tex17" class="hx-panel fs-5" aria-live="polite"></div>
 							</div>
 						</div>
 					</div>
-					<div class="accordion w-100" id="accordionExample" data-bs-theme="dark">
+					<div class="accordion w-100" id="accordionExample">
 						<div class="row mt-5">
 							<div class="col-12">
 								<h3 class="text-center mb-3">Aparições:</h3>
-								<div class="accordion rounded-0" id="accordionExample" data-bs-theme="dark">
+								<div class="accordion rounded-0" id="accordionExample-2">
 									<div class="accordion-item rounded-0">
 										<h2 class="accordion-header">
 											<button class="accordion-button collapsed rounded-0" type="button"
@@ -508,7 +510,7 @@
 				<div class="row align-items-stretch mb-3">
 					<div class="col-md-5 d-flex flex-column">
 						<div class="card flex-fill rounded-0">
-							<img src="img/rubra1.webp" class="card-img-top img-fluid" alt="...">
+							<img src="img/rubra1.webp" class="card-img-top img-fluid" alt="Morte Rubra" loading="lazy" decoding="async">
 							<div class="card-body">
 								<h5 class="card-title">
 									<h5 class="card-title">Morte Rubra</h5>
@@ -536,19 +538,19 @@
 							</div>
 							<div class="carousel-inner h-100">
 								<div class="carousel-item active h-100">
-									<img src="img/rubraart.jfif" class="d-block w-100 h-100 object-fit-cover" alt="...">
+									<img src="img/rubraart.jfif" class="d-block w-100 h-100 object-fit-cover" alt="Morte Rubra" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
-									<img src="img/rubra2.webp" class="d-block w-100 h-100 object-fit-cover" alt="...">
+									<img src="img/rubra2.webp" class="d-block w-100 h-100 object-fit-cover" alt="Morte Rubra" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
-									<img src="img/rubra3.webp" class="d-block w-100 h-100 object-fit-cover" alt="...">
+									<img src="img/rubra3.webp" class="d-block w-100 h-100 object-fit-cover" alt="Morte Rubra" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
-									<img src="img/rubra4.jpg" class="d-block w-100 h-100 object-fit-cover" alt="...">
+									<img src="img/rubra4.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Morte Rubra" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
-									<img src="img/rubra5.webp" class="d-block w-100 h-100 object-fit-cover" alt="...">
+									<img src="img/rubra5.webp" class="d-block w-100 h-100 object-fit-cover" alt="Morte Rubra" loading="lazy" decoding="async">
 								</div>
 							</div>
 							<button class="carousel-control-prev" type="button" data-bs-target="#picada"
@@ -567,27 +569,27 @@
 						<div class="col-12">
 							<div class="d-flex flex-wrap justify-content-center">
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto018()">Ocultar</button>
+									data-panel="tex18" data-view="hide" aria-pressed="false">Ocultar</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto52()">Descrição</button>
+									data-panel="tex18" data-view="desc" aria-pressed="false">Descrição</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto53()">Características</button>
+									data-panel="tex18" data-view="feat" aria-pressed="false">Características</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto54()">Habilidades</button>
+									data-panel="tex18" data-view="abil" aria-pressed="false">Habilidades</button>
 								<button type="button" class="btn btn-danger rounded-0"
-									onclick="mostrarTextoAlert18()">PERIGO:
+									data-panel="tex18" data-view="alert" aria-pressed="false">PERIGO:
 									MORTAL</button>
 							</div>
 							<div class="mt-4">
-								<div id="tex18" class="fs-5"></div>
+								<div id="tex18" class="hx-panel fs-5" aria-live="polite"></div>
 							</div>
 						</div>
 					</div>
-					<div class="accordion w-100" id="accordionExample" data-bs-theme="dark">
+					<div class="accordion w-100" id="accordionExample-3">
 						<div class="row mt-5">
 							<div class="col-12">
 								<h3 class="text-center mb-3">Aparições:</h3>
-								<div class="accordion rounded-0" id="accordionExample" data-bs-theme="dark">
+								<div class="accordion rounded-0" id="accordionExample-4">
 									<div class="accordion-item rounded-0">
 										<h2 class="accordion-header">
 											<button class="accordion-button collapsed rounded-0" type="button"
@@ -674,7 +676,7 @@
 				<div class="row align-items-stretch mb-3">
 					<div class="col-md-5 d-flex flex-column">
 						<div class="card flex-fill rounded-0">
-							<img src="img/tufaocard.webp" class="card-img-top img-fluid" alt="...">
+							<img src="img/tufaocard.webp" class="card-img-top img-fluid" alt="Tufãomerangue" loading="lazy" decoding="async">
 							<div class="card-body">
 								<h5 class="card-title">Tufãomerangue</h5>
 								<q class="card-text">Assim como os anéis dentro de uma árvore, a marca de queimadura
@@ -699,18 +701,18 @@
 							<div class="carousel-inner h-100">
 								<div class="carousel-item active h-100">
 									<img src="img/tufao-merangue-um.jpg" class="d-block w-100 h-100 object-fit-cover"
-										alt="...">
+									 alt="Tufãomerangue" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
 									<img src="img/tufao-merangue-dois.png" class="d-block w-100 h-100 object-fit-cover"
-										alt="...">
+									 alt="Tufãomerangue" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
 									<img src="img/tufao-merangue-bebe-um.avif"
-										class="d-block w-100 h-100 object-fit-cover" alt="...">
+										class="d-block w-100 h-100 object-fit-cover" alt="Tufãomerangue" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
-									<img src="img/tufao4.webp" class="d-block w-100 h-100 object-fit-cover" alt="...">
+									<img src="img/tufao4.webp" class="d-block w-100 h-100 object-fit-cover" alt="Tufãomerangue" loading="lazy" decoding="async">
 								</div>
 							</div>
 							<button class="carousel-control-prev" type="button" data-bs-target="#machado"
@@ -729,27 +731,27 @@
 						<div class="col-12">
 							<div class="d-flex flex-wrap justify-content-center">
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto020()">Ocultar</button>
+									data-panel="tex20" data-view="hide" aria-pressed="false">Ocultar</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto55()">Descrição</button>
+									data-panel="tex20" data-view="desc" aria-pressed="false">Descrição</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto56()">Características</button>
+									data-panel="tex20" data-view="feat" aria-pressed="false">Características</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto57()">Habilidades</button>
+									data-panel="tex20" data-view="abil" aria-pressed="false">Habilidades</button>
 								<button type="button" class="btn btn-danger rounded-0"
-									onclick="mostrarTextoAlert20()">PERIGO:
+									data-panel="tex20" data-view="alert" aria-pressed="false">PERIGO:
 									MORTAL</button>
 							</div>
 							<div class="mt-4">
-								<div id="tex20" class="fs-5"></div>
+								<div id="tex20" class="hx-panel fs-5" aria-live="polite"></div>
 							</div>
 						</div>
 					</div>
-					<div class="accordion w-100" id="accordionExample" data-bs-theme="dark">
+					<div class="accordion w-100" id="accordionExample-5">
 						<div class="row mt-5">
 							<div class="col-12">
 								<h3 class="text-center mb-3">Aparições:</h3>
-								<div class="accordion rounded-0" id="accordionExample" data-bs-theme="dark">
+								<div class="accordion rounded-0" id="accordionExample-6">
 									<div class="accordion-item rounded-0">
 										<h2 class="accordion-header">
 											<button class="accordion-button collapsed rounded-0" type="button"
@@ -847,7 +849,7 @@
 				<div class="row align-items-stretch mb-3">
 					<div class="col-md-4 d-flex flex-column">
 						<div class="card flex-fill rounded-0">
-							<img src="img/caudacard.webp" class="card-img-top img-fluid" alt="...">
+							<img src="img/caudacard.webp" class="card-img-top img-fluid" alt="Cauda de Fogo" loading="lazy" decoding="async">
 							<div class="card-body">
 								<h5 class="card-title">Cauda de Fogo</h5>
 								<p class="card-text">Melequento: "Aquela coisa tinha olhos atrás da cabeça!"</p>
@@ -867,13 +869,13 @@
 							</div>
 							<div class="carousel-inner h-100">
 								<div class="carousel-item active h-100">
-									<img src="img/cauda1.png" class="d-block w-100 h-100 object-fit-cover" alt="...">
+									<img src="img/cauda1.png" class="d-block w-100 h-100 object-fit-cover" alt="Cauda de Fogo" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
-									<img src="img/cauda1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="...">
+									<img src="img/cauda1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Cauda de Fogo" loading="lazy" decoding="async">
 								</div>
 								<div class="carousel-item h-100">
-									<img src="img/cauda3.webp" class="d-block w-100 h-100 object-fit-cover" alt="...">
+									<img src="img/cauda3.webp" class="d-block w-100 h-100 object-fit-cover" alt="Cauda de Fogo" loading="lazy" decoding="async">
 								</div>
 							</div>
 							<button class="carousel-control-prev" type="button" data-bs-target="#nadder"
@@ -892,27 +894,27 @@
 						<div class="col-12">
 							<div class="d-flex flex-wrap justify-content-center">
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto019()">Ocultar</button>
+									data-panel="tex19" data-view="hide" aria-pressed="false">Ocultar</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto100()">Descrição</button>
+									data-panel="tex19" data-view="desc" aria-pressed="false">Descrição</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto101()">Características</button>
+									data-panel="tex19" data-view="feat" aria-pressed="false">Características</button>
 								<button type="button" class="btn btn-dark rounded-0"
-									onclick="mostrarTexto102()">Habilidades</button>
+									data-panel="tex19" data-view="abil" aria-pressed="false">Habilidades</button>
 								<button type="button" class="btn btn-danger rounded-0"
-									onclick="mostrarTextoAlert19()">PERIGO:
+									data-panel="tex19" data-view="alert" aria-pressed="false">PERIGO:
 									MORTAL</button>
 							</div>
 							<div class="mt-4">
-								<div id="tex19" class="fs-5"></div>
+								<div id="tex19" class="hx-panel fs-5" aria-live="polite"></div>
 							</div>
 						</div>
 					</div>
-					<div class="accordion w-100" id="accordionExample" data-bs-theme="dark">
+					<div class="accordion w-100" id="accordionExample-7">
 						<div class="row mt-5">
 							<div class="col-12">
 								<h3 class="text-center mb-3">Aparições:</h3>
-								<div class="accordion rounded-0" id="accordionExample" data-bs-theme="dark">
+								<div class="accordion rounded-0" id="accordionExample-8">
 									<div class="accordion-item rounded-0">
 										<h2 class="accordion-header">
 											<button class="accordion-button collapsed rounded-0" type="button"
@@ -1088,7 +1090,7 @@
 
 <footer>
 	<a class="icon-link icon-link-hover link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-		style="--bs-link-hover-color-rgb: 25, 135, 84;" href="#inicio-race">
+		style="--bs-link-hover-color-rgb: 25, 135, 84;" href="#">
 		Voltar ao início
 		<svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true">
 			<path
@@ -1098,8 +1100,9 @@
 	<p>Copyright &copy; Soju e Bacana 2025.</p>
 </footer>
 
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/javascript.js"></script>
+<script src="js/bootstrap.bundle.min.js" defer></script>
+<script src="js/dragons.js" defer></script>
+	<script src="js/site.js" defer></script>
 
 <!-- https://ping-xiong.github.io/Dragons-Race-to-the-Edge-Interactive-Map-Backup/#/map -->
 </body>

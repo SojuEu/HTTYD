@@ -3,9 +3,11 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="color-scheme" content="dark light"><meta name="theme-color" content="#0b0d12">
+	<script>(function(){try{var t=localStorage.getItem("hx-theme")||"auto",d=matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.dataset.bsTheme=t==="auto"?(d?"dark":"light"):t}catch(e){document.documentElement.dataset.bsTheme="dark"}})()</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Curtas</title>
-	<meta name="description" content="Httyd fan site">
+	<title>Curtas · HTTYD</title>
+	<meta name="description" content="Curtas — fan site de Como Treinar o Seu Dragão (HTTYD).">
 	<meta name="keywords" content="Dragões, HTTYD, Como Treinar O Seu Dragão, Berk">
 	<meta name="author" content="Júlia Sophia, Sérgio">
 	<link rel="icon" type="image/x-icon" href="img/brasao-dragao.svg">
@@ -28,15 +30,15 @@
 	}
 </style>
 
-<body data-bs-theme="dark" id="inicio-curtas">
+<body id="inicio-curtas">
 
 	<!-- Início do Nav -->
-	<nav class="navbar navbar-expand-lg bg-dark nav-underline sticky-top">
+	<nav class="navbar navbar-expand-lg sticky-top">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="index.html">
 				<!-- Img da logo no nav -->
 				<img src="img/brasaoberk.svg" style="max-height: 40px;"
-					class="d-inline-block align-text-top img-fluid"></a>
+					class="d-inline-block align-text-top img-fluid" alt="brasaoberk"></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
 				aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -47,7 +49,7 @@
 						<a class="nav-link" href="index.html">Início</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" style="color: rgb(218, 0, 0);"
+						<a class="nav-link active" aria-current="page"
 							href="curtas.html">Curtas</a>
 					</li>
 					<li class="nav-item">
@@ -157,7 +159,7 @@
 
 				<div class="head-container">
 					<img src="img/R.png" class="img-fluid rounded col-6
-						alt=" Berk início curta O presente do fúria da noite">
+						alt=" Berk início curta O presente do fúria da noite" loading="lazy" decoding="async">
 				</div>
 
 				<p>
@@ -207,35 +209,35 @@
 					<div class="carousel-inner h-100">
 						<div class="carousel-item active h-100">
 							<img src="img/presentedofuriadanoite1.png" class="d-block w-100 h-100 object-fit-cover"
-								alt="...">
+							 alt="presentedofuriadanoite1" loading="lazy" decoding="async">
 						</div>
 						<div class="carousel-item h-100">
 							<img src="img/presentedofuriadanoite2.png" class="d-block w-100 h-100 object-fit-cover"
-								alt="...">
+							 alt="presentedofuriadanoite2" loading="lazy" decoding="async">
 						</div>
 						<div class="carousel-item h-100">
 							<img src="img/presentedofuriadanoite3.png" class="d-block w-100 h-100 object-fit-cover"
-								alt="...">
+							 alt="presentedofuriadanoite3" loading="lazy" decoding="async">
 						</div>
 						<div class="carousel-item h-100">
 							<img src="img/presentedofuriadanoite4.png" class="d-block w-100 h-100 object-fit-cover"
-								alt="...">
+							 alt="presentedofuriadanoite4" loading="lazy" decoding="async">
 						</div>
 						<div class="carousel-item h-100">
 							<img src="img/presentedofuriadanoite5.png" class="d-block w-100 h-100 object-fit-cover"
-								alt="...">
+							 alt="presentedofuriadanoite5" loading="lazy" decoding="async">
 						</div>
 						<div class="carousel-item h-100">
 							<img src="img/presentedofuriadanoite6.png" class="d-block w-100 h-100 object-fit-cover"
-								alt="...">
+							 alt="presentedofuriadanoite6" loading="lazy" decoding="async">
 						</div>
 						<div class="carousel-item h-100">
 							<img src="img/presentedofuriadanoite8.png" class="d-block w-100 h-100 object-fit-cover"
-								alt="...">
+							 alt="presentedofuriadanoite8" loading="lazy" decoding="async">
 						</div>
 						<div class="carousel-item h-100">
 							<img src="img/presentedofuriadanoite9.png" class="d-block w-100 h-100 object-fit-cover"
-								alt="...">
+							 alt="presentedofuriadanoite9" loading="lazy" decoding="async">
 						</div>
 					</div>
 					<button class="carousel-control-prev" type="button" data-bs-target="#presente" data-bs-slide="prev">
@@ -256,7 +258,7 @@
 
 	<footer>
 		<a class="icon-link icon-link-hover link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-			style="--bs-link-hover-color-rgb: 25, 135, 84;" href="#inicio-curtas">
+			style="--bs-link-hover-color-rgb: 25, 135, 84;" href="#">
 			Voltar ao início
 			<svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true">
 				<path
@@ -266,8 +268,9 @@
 		<p>Copyright &copy; Soju e Bacana 2025.</p>
 	</footer>
 
-	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/javascript.js"></script>
+	<script src="js/bootstrap.bundle.min.js" defer></script>
+	<script src="js/dragons.js" defer></script>
+	<script src="js/site.js" defer></script>
 
 	<!-- https://ping-xiong.github.io/Dragons-Race-to-the-Edge-Interactive-Map-Backup/#/map -->
 </body>
