@@ -1,6 +1,3 @@
-/* HTTYD · estilo.css — tokens → base → layout → componentes → responsivo */
-
-/* 1. TOKENS E TEMAS (claro / escuro, controlados por <html data-bs-theme>) */
 :root {
   --ember: #d90f0f; --ember-hi: #ff6b5e; --radius: 1.1rem;
   --font-head: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
