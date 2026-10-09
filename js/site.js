@@ -7,7 +7,19 @@
   const mq = matchMedia('(prefers-color-scheme: dark)');
   const KEY = 'hx-theme';
   const LABEL = { auto: 'Automático', light: 'Claro', dark: 'Escuro' };
-  const ICON = { auto: '◐', light: '☀', dark: '☾' };
+  const NEXT = { auto: 'light', light: 'dark', dark: 'auto' };
+  const svg = b => `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">${b}</svg>`;
+  const ICON = {
+    auto: svg('<circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/>'),
+    light: svg('<circle cx="12" cy="12" r="4" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9L7 7M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'),
+    dark: svg('<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" fill="currentColor"/>')
+  };
+  function paintBtn(t) {
+    const b = $('.hx-theme-btn'); if (!b) return;
+    const m = `Tema: ${LABEL[t]}. Clique para ${LABEL[NEXT[t]]}`;
+    b.innerHTML = ICON[t] + `<span class="d-none d-lg-inline ms-2">${LABEL[t]}</span>`;
+    b.title = m; b.setAttribute('aria-label', m);
+  }
 
   /* ---------- Tema (auto / claro / escuro) ---------- */
   const saved = () => { try { return localStorage.getItem(KEY) || 'auto'; } catch { return 'auto'; } };
@@ -15,12 +27,7 @@
     const eff = t === 'auto' ? (mq.matches ? 'dark' : 'light') : t;
     root.dataset.bsTheme = eff;
     $('meta[name="theme-color"]')?.setAttribute('content', eff === 'dark' ? '#0b0d12' : '#f3eee6');
-    $$('[data-hx-theme]').forEach(b => {
-      const on = b.dataset.hxTheme === t;
-      b.classList.toggle('active', on);
-      on ? b.setAttribute('aria-current', 'true') : b.removeAttribute('aria-current');
-    });
-    const i = $('[data-hx-icon]'); if (i) i.textContent = ICON[t];
+    paintBtn(t);
   }
   const setTheme = t => { try { localStorage.setItem(KEY, t); } catch { /* modo privado */ } applyTheme(t); };
   mq.addEventListener('change', () => saved() === 'auto' && applyTheme('auto'));
@@ -37,13 +44,11 @@
         a.closest('.dropdown')?.querySelector('.dropdown-toggle')?.classList.add('active');
       } else if (h !== '#' && a.classList.contains('nav-link')) a.classList.remove('active');
     });
-    const host = $('.navbar-collapse', nav); if (!host) return;
-    const d = document.createElement('div');
-    d.className = 'dropdown hx-theme ms-lg-auto mt-2 mt-lg-0';
-    d.innerHTML = `<button class="btn btn-sm hx-theme-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Tema do site"><span data-hx-icon aria-hidden="true"></span> <span class="d-lg-none">Tema</span></button>` +
-      `<ul class="dropdown-menu dropdown-menu-end">${Object.keys(LABEL).map(k => `<li><button type="button" class="dropdown-item" data-hx-theme="${k}">${ICON[k]} ${LABEL[k]}</button></li>`).join('')}</ul>`;
-    host.append(d);
-    d.addEventListener('click', e => { const b = e.target.closest('[data-hx-theme]'); if (b) setTheme(b.dataset.hxTheme); });
+    const tg = $('.navbar-toggler', nav); if (!tg) return;
+    const btn = document.createElement('button');            // botão de tema fora do menu: sempre visível
+    btn.type = 'button'; btn.className = 'btn hx-theme-btn';
+    tg.before(btn);
+    btn.addEventListener('click', () => setTheme(NEXT[saved()]));
   }
   let last = 0, busy = false;
   addEventListener('scroll', () => {
@@ -114,6 +119,8 @@
     p.innerHTML = render((window.HTTYD_DRAGONS || {})[id] || {}, v);
     $$(`[data-panel="${id}"]`).forEach(x => { const on = x.dataset.view === v && v !== 'hide'; x.classList.toggle('is-on', on); x.setAttribute('aria-pressed', on); });
   });
+
+  document.addEventListener('show.bs.modal', e => e.target.querySelector('.modal-body')?.scrollTo(0, 0));   // livro abre sempre no topo
 
   /* ---------- Pequenos reparos globais ---------- */
   function init() {

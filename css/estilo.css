@@ -2,18 +2,18 @@
 
 /* 1. TOKENS E TEMAS (claro / escuro, controlados por <html data-bs-theme>) */
 :root {
-  --ember: #ff7a1a; --ember-hi: #ffb454; --radius: 1.1rem;
+  --ember: #d90f0f; --ember-hi: #ff6b5e; --radius: 1.1rem;
   --font-head: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
   --font-body: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 html[data-bs-theme="dark"] {
   --bg: #0b0d12; --panel: rgba(11, 13, 18, .80); --panel-solid: #10131a;
-  --line: rgba(255, 255, 255, .13); --ink: #eceff4; --muted: #a9b2c0; --accent: #ff8a3d;
+  --line: rgba(255, 255, 255, .13); --ink: #eceff4; --muted: #a9b2c0; --accent: #ff5a52;
   color-scheme: dark;
 }
 html[data-bs-theme="light"] {
   --bg: #f3eee6; --panel: rgba(255, 252, 246, .90); --panel-solid: #fffaf1;
-  --line: rgba(40, 28, 14, .16); --ink: #1f1912; --muted: #5b5144; --accent: #b84a07;
+  --line: rgba(40, 28, 14, .16); --ink: #1f1912; --muted: #5b5144; --accent: #c40000;
   color-scheme: light;
 }
 
@@ -60,6 +60,9 @@ article { display: flex; flex-direction: column; align-items: center; }
 .img-max-heigh { max-height: 300px; width: auto; }
 .img-max-heigh2 { height: 220px; width: auto; }
 .img-max-heigh3 { max-height: 500px; width: auto; }
+.hx-posters { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 130px), 1fr)); gap: clamp(.75rem, 2.5vw, 1.25rem); width: 100%; }
+@media (min-width: 768px) { .hx-posters { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); } }
+.hx-posters img { width: 100%; height: auto; max-height: none; aspect-ratio: 2 / 3; object-fit: cover; max-width: 220px; justify-self: center; box-shadow: 0 10px 24px -14px rgba(0, 0, 0, .7); }
 .hx-quote { font-style: italic; color: var(--muted); }
 .breadcrumb { justify-content: center; }
 
@@ -72,11 +75,21 @@ article { display: flex; flex-direction: column; align-items: center; }
 .hx-navbar.is-scrolled { box-shadow: 0 6px 24px -12px rgba(0, 0, 0, .55); }
 .hx-navbar .nav-link { border-radius: .5rem; }
 .hx-navbar .nav-link.active, .hx-navbar .dropdown-toggle.active { color: var(--accent) !important; font-weight: 600; }
-.hx-theme-btn { border: 1px solid var(--line); color: var(--ink); }
-.hx-theme-btn:hover, .hx-theme-btn.show { border-color: var(--accent); color: var(--accent); }
+.hx-theme-btn { display: inline-flex; align-items: center; margin: 0 .5rem 0 auto; padding: .4rem .6rem; border: 1px solid var(--line); border-radius: .6rem; background: transparent; color: var(--ink); }
+.hx-theme-btn:hover { border-color: var(--accent); color: var(--accent); }
+@media (min-width: 768px) { .hx-theme-btn { order: 3; margin: 0 0 0 .5rem; } }
+@media (min-width: 768px) and (max-width: 991.98px) { .hx-navbar .nav-link { font-size: .9rem; } }
 .hx-navbar .dropdown-item.active { background: var(--accent); color: #fff; }
-.accordion-button:hover { filter: brightness(1.15); }
-.card { text-align: center; overflow: hidden; }
+/* acordeão sem o azul padrão do Bootstrap */
+.accordion { --bs-accordion-bg: transparent; --bs-accordion-color: var(--ink); --bs-accordion-btn-color: var(--ink); --bs-accordion-btn-bg: transparent; --bs-accordion-border-color: var(--line); --bs-accordion-border-radius: var(--radius); --bs-accordion-inner-border-radius: calc(var(--radius) - 1px); --bs-accordion-active-bg: transparent; --bs-accordion-active-color: var(--accent); --bs-accordion-btn-focus-box-shadow: none; --bs-accordion-btn-focus-border-color: var(--line); }
+.accordion-button, .accordion-button:focus { background: transparent; box-shadow: none; }
+.accordion-button:not(.collapsed) { color: var(--accent); box-shadow: inset 3px 0 0 var(--accent); }
+.accordion-button:hover { background: color-mix(in srgb, var(--ink) 7%, transparent); }
+.accordion-button::after, .accordion-button:not(.collapsed)::after { filter: grayscale(1); }
+.navbar-toggler:focus { box-shadow: none; }
+.card { text-align: center; overflow: hidden; border-radius: var(--radius); }
+.card-img-top { border-radius: 0; }
+.row.align-items-stretch { --bs-gutter-x: 1.25rem; --bs-gutter-y: 1.25rem; }  /* respiro entre card e carousel */
 
 /* 5. PAINÉIS DOS DRAGÕES (botões data-panel / data-view) */
 .btn[data-panel] { border-radius: .6rem !important; margin: .2rem; }
@@ -102,8 +115,8 @@ article { display: flex; flex-direction: column; align-items: center; }
 .hx-kicker { color: var(--ember-hi); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; margin: 0 0 .4rem; }
 .hx-copy h2 { font-size: clamp(1.6rem, 1rem + 2.6vw, 2.8rem); margin: 0 0 .6rem; }
 .hx-copy p { max-width: 52ch; color: rgba(255, 255, 255, .88); }
-.btn-ember { background: var(--ember); border: 0; color: #1a0d02; font-weight: 700; border-radius: .6rem; padding: .6rem 1.2rem; }
-.btn-ember:hover, .btn-ember:focus-visible { background: var(--ember-hi); color: #1a0d02; }
+.btn-ember { background: var(--ember); border: 0; color: #fff; font-weight: 700; border-radius: .6rem; padding: .6rem 1.2rem; }
+.btn-ember:hover, .btn-ember:focus-visible { background: #b30c0c; color: #fff; }
 .hx-hero .carousel-control-prev, .hx-hero .carousel-control-next {
   top: 50%; bottom: auto; width: 2.9rem; height: 2.9rem; margin: 0 .75rem; transform: translateY(-50%);
   background: rgba(0, 0, 0, .45); border-radius: 50%; opacity: 1; -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
@@ -114,7 +127,7 @@ article { display: flex; flex-direction: column; align-items: center; }
   box-sizing: border-box; width: auto; height: auto; text-indent: 0; margin: 0; padding: .35rem .85rem; flex: 0 0 auto;
   border: 1px solid rgba(255, 255, 255, .4); border-radius: 999px; background: rgba(0, 0, 0, .4); color: #fff; font-size: .78rem; opacity: .9;
 }
-.hx-tabs [data-bs-slide-to].active { background: var(--ember); border-color: var(--ember); color: #1a0d02; font-weight: 700; opacity: 1; }
+.hx-tabs [data-bs-slide-to].active { background: var(--ember); border-color: var(--ember); color: #fff; font-weight: 700; opacity: 1; }
 .hx-bar { position: absolute; top: .9rem; right: .9rem; z-index: 5; display: flex; align-items: center; gap: .5rem; color: #fff; font-size: .78rem; font-weight: 600; }
 .hx-count, .hx-pp { background: rgba(0, 0, 0, .5); border: 1px solid rgba(255, 255, 255, .25); border-radius: 999px; color: #fff; }
 .hx-count { padding: .25rem .65rem; }
@@ -126,10 +139,22 @@ article { display: flex; flex-direction: column; align-items: center; }
 .carousel:not(.hx-hero) { border-radius: var(--radius); overflow: hidden; box-shadow: 0 14px 34px -18px rgba(0, 0, 0, .7); }  /* carousels das classes */
 .carousel-caption { color: #fff; text-shadow: 2px 3px 4px #000; }
 
+/* LIVROS: card em modal, centralizado e por cima de tudo */
+.hx-book-btn { padding: 0; border: 0; background: none; border-radius: .6rem; cursor: pointer; transition: transform .2s ease, filter .2s ease; }
+.hx-book-btn:hover, .hx-book-btn:focus-visible { transform: translateY(-6px); filter: drop-shadow(0 12px 14px rgba(0, 0, 0, .45)); }
+.hx-book .modal-content { background: #f2e4c4 url(../img/book-old-page.avif) center / cover no-repeat; color: #1d1409; border: 0; border-radius: var(--radius); font-family: Georgia, "Times New Roman", serif; box-shadow: 0 30px 70px -20px rgba(0, 0, 0, .85); }
+.hx-book .modal-header { border-bottom-color: rgba(60, 40, 10, .25); }
+html[data-bs-theme] .hx-book .btn-close { filter: none; }
+.modal.hx-book.fade .modal-dialog { transform: scale(.94) translateY(14px); transition: transform .25s ease; }
+.modal.hx-book.show .modal-dialog { transform: none; }
+.hx-book__grid { display: grid; grid-template-columns: minmax(120px, 200px) 1fr; gap: 1.25rem; align-items: start; }
+.hx-book__cover { width: 100%; border-radius: .5rem; box-shadow: 0 14px 30px -12px rgba(0, 0, 0, .6); }
+@media (max-width: 575.98px) { .hx-book__grid { grid-template-columns: 1fr; } .hx-book__cover { max-width: 160px; margin-inline: auto; } }
+
 /* 7. RODAPÉ */
 footer {
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .6rem; padding: 1.25rem 1rem 1.25rem 7rem;
-  text-align: center; background: var(--panel-solid) url(../img/banguela-dancando.png) no-repeat 1rem center / 90px; border-top: 1px solid var(--line); color: var(--ink);
+  text-align: center; background-color: var(--panel-solid); background-image: url(../img/banguela-dancando.png); background-repeat: no-repeat; background-position: 1rem center; background-size: 90px; border-top: 1px solid var(--line); color: var(--ink);
 }
 
 /* 8. RESPONSIVO */
@@ -143,5 +168,5 @@ footer {
   .hx-hero .carousel-control-prev, .hx-hero .carousel-control-next { display: none; }
   .carousel-indicators.hx-tabs { left: 1rem; right: 1rem; justify-content: center; }
 }
-@media (max-width: 575.98px) { footer { padding-left: 1rem; background-image: none; } .btn[data-panel] { flex: 1 1 45%; } }
+@media (max-width: 575.98px) { footer { padding: 6rem 1rem 1.25rem; background-position: center 1rem; background-size: 78px; } .btn[data-panel] { flex: 1 1 45%; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }

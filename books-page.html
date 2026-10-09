@@ -24,23 +24,12 @@
 		background-position: center;
 		background-attachment: fixed;
 	}
-
-	/* O que deixa o offcanvas com aspecto de livro: */
-	.offcanvas {
-		background-image: url(img/book-old-page.avif);
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		font-family: Georgia, 'Times New Roman', Times, serif;
-		color: black;
-		/* A fonte que se parece com a de um livro. */
-	}
 </style>
 
 <body id="inicio-books">
 
 	<!-- Início do Nav -->
-	<nav class="navbar navbar-expand-lg sticky-top">
+	<nav class="navbar navbar-expand-md sticky-top">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="index.html">
 				<!-- Img da logo no nav -->
@@ -178,117 +167,170 @@
 				<div class="livros-align">
 
 					<!-- Livro 1 -->
-					<a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
-						aria-controls="offcanvasWithBothOptions">
+					<button type="button" class="hx-book-btn" data-bs-toggle="modal" data-bs-target="#offcanvasWithBothOptions" aria-haspopup="dialog" aria-label="Abrir detalhes: Como ser um viking">
 						<img src="img/livro-1.webp" class="img-fluid rounded img-max-heigh"
 							alt="Livro da Franquia de Como Treinar O Seu Dragão de Cressida Cowell" loading="lazy" decoding="async">
-					</a>
+					</button>
 
 					<!-- Livro 2 -->
-					<a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions2"
-						aria-controls="offcanvasWithBothOptions">
+					<button type="button" class="hx-book-btn" data-bs-toggle="modal" data-bs-target="#offcanvasWithBothOptions2" aria-haspopup="dialog" aria-label="Abrir detalhes: Como treinar o seu dragão">
 						<img src="img/livro-2.webp" class="img-fluid rounded img-max-heigh"
 							alt="Livro um da Franquia de Como Treiarr O Seu Dragão de Cressida Cowell" loading="lazy" decoding="async">
-					</a>
+					</button>
 
 					<!-- Livro 3 -->
-					<a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions3"
-						aria-controls="offcanvasWithBothOptions">
+					<button type="button" class="hx-book-btn" data-bs-toggle="modal" data-bs-target="#offcanvasWithBothOptions3" aria-haspopup="dialog" aria-label="Abrir detalhes: Como ser um pirata">
 						<img src="img/livro-3.webp" class="img-fluid rounded img-max-heigh"
 							alt="Livro dois da Franquia de Como Treiarr O Seu Dragão de Cressida Cowell" loading="lazy" decoding="async">
-					</a>
+					</button>
 
 					<!-- Livro 4 -->
-					<a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions4"
-						aria-controls="offcanvasWithBothOptions">
+					<button type="button" class="hx-book-btn" data-bs-toggle="modal" data-bs-target="#offcanvasWithBothOptions4" aria-haspopup="dialog" aria-label="Abrir detalhes: Como falar dragonês">
 						<img src="img/livro-4.webp" class="img-fluid rounded img-max-heigh"
 							alt="Livro três da Franquia de Como Treiarr O Seu Dragão de Cressida Cowell" loading="lazy" decoding="async">
-					</a>
+					</button>
 
 					<!-- Livro 5 -->
-					<a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions5"
-						aria-controls="offcanvasWithBothOptions">
+					<button type="button" class="hx-book-btn" data-bs-toggle="modal" data-bs-target="#offcanvasWithBothOptions5" aria-haspopup="dialog" aria-label="Abrir detalhes: Como quebrar a maldição de um dragão">
 						<img src="img/livro-5.webp" class="img-fluid rounded img-max-heigh"
 							alt="Livro quatro da Franquia de Como Treiarr O Seu Dragão de Cressida Cowell" loading="lazy" decoding="async">
-					</a>
+					</button>
 
 					<!-- Livro 6 -->
-					<a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions6"
-						aria-controls="offcanvasWithBothOptions">
+					<button type="button" class="hx-book-btn" data-bs-toggle="modal" data-bs-target="#offcanvasWithBothOptions6" aria-haspopup="dialog" aria-label="Abrir detalhes: Como mudar uma história de dragão">
 						<img src="img/livro-6.webp" class="img-fluid rounded img-max-heigh"
 							alt="Livro cinco da Franquia de Como Treiarr O Seu Dragão de Cressida Cowell" loading="lazy" decoding="async">
-					</a>
+					</button>
 
 					<!-- Livro 7 -->
-					<a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions7"
-						aria-controls="offcanvasWithBothOptions">
+					<button type="button" class="hx-book-btn" data-bs-toggle="modal" data-bs-target="#offcanvasWithBothOptions7" aria-haspopup="dialog" aria-label="Abrir detalhes: O guia do herói para vencer dragões mortais">
 						<img src="img/livro-7.webp" class="img-fluid rounded img-max-heigh"
 							alt="Livro seis da Franquia de Como Treiarr O Seu Dragão de Cressida Cowell" loading="lazy" decoding="async">
-					</a>
+					</button>
 
 					<!-- Livro 8 -->
-					<a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions8"
-						aria-controls="offcanvasWithBothOptions">
+					<button type="button" class="hx-book-btn" data-bs-toggle="modal" data-bs-target="#offcanvasWithBothOptions8" aria-haspopup="dialog" aria-label="Abrir detalhes: Como navegar em uma tempestade de dragão">
 						<img src="img/livro-8.webp" class="img-fluid rounded img-max-heigh"
 							alt="Livro sete da Franquia de Como Treiarr O Seu Dragão de Cressida Cowell" loading="lazy" decoding="async">
-					</a>
+					</button>
 
 					<!-- Livro 9 -->
-					<a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions9"
-						aria-controls="offcanvasWithBothOptions">
+					<button type="button" class="hx-book-btn" data-bs-toggle="modal" data-bs-target="#offcanvasWithBothOptions9" aria-haspopup="dialog" aria-label="Abrir detalhes: Como partir o coração de um dragão">
 						<img src="img/livro-9.webp" class="img-fluid rounded img-max-heigh"
 							alt="Livro oito da Franquia de Como Treiarr O Seu Dragão de Cressida Cowell" loading="lazy" decoding="async">
-					</a>
+					</button>
 
 					<!-- Livro 10 -->
-					<a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions10"
-						aria-controls="offcanvasWithBothOptions">
+					<button type="button" class="hx-book-btn" data-bs-toggle="modal" data-bs-target="#offcanvasWithBothOptions10" aria-haspopup="dialog" aria-label="Abrir detalhes: Como roubar a espada de um dragão">
 						<img src="img/livro-10.webp" class="img-fluid rounded img-max-heigh"
 							alt="Livro nove da Franquia de Como Treiarr O Seu Dragão de Cressida Cowell" loading="lazy" decoding="async">
-					</a>
+					</button>
 
 					<!-- Livro 11 -->
-					<a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions11"
-						aria-controls="offcanvasWithBothOptions">
+					<button type="button" class="hx-book-btn" data-bs-toggle="modal" data-bs-target="#offcanvasWithBothOptions11" aria-haspopup="dialog" aria-label="Abrir detalhes: Como pegar a joia do dragão">
 						<img src="img/livro-11.webp" class="img-fluid rounded img-max-heigh"
 							alt="Livro dez da Franquia de Como Treiarr O Seu Dragão de Cressida Cowell" loading="lazy" decoding="async">
-					</a>
+					</button>
 
 					<!-- Livro 12 -->
-					<a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions12"
-						aria-controls="offcanvasWithBothOptions">
+					<button type="button" class="hx-book-btn" data-bs-toggle="modal" data-bs-target="#offcanvasWithBothOptions12" aria-haspopup="dialog" aria-label="Abrir detalhes: Como trair o herói de um dragão">
 						<img src="img/livro-12.webp" class="img-fluid rounded img-max-heigh"
 							alt="Livro onze da Franquia de Como Treiarr O Seu Dragão de Cressida Cowell" loading="lazy" decoding="async">
-					</a>
+					</button>
 
 					<!-- Livro 13 -->
-					<a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions13"
-						aria-controls="offcanvasWithBothOptions">
+					<button type="button" class="hx-book-btn" data-bs-toggle="modal" data-bs-target="#offcanvasWithBothOptions13" aria-haspopup="dialog" aria-label="Abrir detalhes: Como enfrentar a fúria de um dragão">
 						<img src="img/livro-13.webp" class="img-fluid rounded img-max-heigh"
 							alt="Livro doze da Franquia de Como Treiarr O Seu Dragão de Cressida Cowell" loading="lazy" decoding="async">
-					</a>
+					</button>
 
 					
 
 					<!-- Livro guia -->
-					<a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions15"
-						aria-controls="offcanvasWithBothOptions">
+					<button type="button" class="hx-book-btn" data-bs-toggle="modal" data-bs-target="#offcanvasWithBothOptions15" aria-haspopup="dialog" aria-label="Abrir detalhes: O livro completo dos dragões">
 						<img src="img/guiadasespecies.webp" class="img-fluid rounded img-max-heigh"
 							alt="Livro guia das especies da Franquia de Como Treiarr O Seu Dragão de Cressida Cowell" loading="lazy" decoding="async">
-					</a>
+					</button>
 
 				</div>
 
 
 
 				<!-- Offcanvas LIVRO 1 viking -->
-				<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
-					aria-labelledby="offcanvasWithBothOptionsLabel">
-					<div class="offcanvas-header">
-						<h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Como ser um viking</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					</div>
-					<div class="offcanvas-body">
+				
+
+				<!-- Offcanvas LIVRO 2 httyd -->
+				
+
+				<!-- Offcanvas LIVRO 3 pirata -->
+				
+
+				<!-- Offcanvas LIVRO 4 dragones -->
+				
+
+				<!-- Offcanvas LIVRO 5 maldição -->
+				
+
+				<!-- Offcanvas LIVRO 6 twist -->
+				
+
+				<!-- Offcanvas LIVRO 7 heros -->
+				
+
+				<!-- Offcanvas LIVRO 8 storm -->
+				
+
+				<!-- Offcanvas LIVRO 9 hearth -->
+				
+
+				<!-- Offcanvas LIVRO 10 sword -->
+				
+
+				<!-- Offcanvas LIVRO 11 jewel -->
+				
+
+				<!-- Offcanvas LIVRO 12 betray -->
+				
+
+				<!-- Offcanvas LIVRO 13 fury -->
+				
+
+				
+
+				<!-- Offcanvas LIVRO 15 book -->
+				
+
+
+			</main>
+		</div>
+
+
+
+	</article>
+
+
+	<footer>
+		<a class="icon-link icon-link-hover link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+			style="--bs-link-hover-color-rgb: 25, 135, 84;" href="#">
+			Voltar ao início
+			<svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true">
+				<path
+					d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+			</svg>
+		</a>
+		<p>Copyright &copy; Soju e Bacana 2025.</p>
+	</footer>
+
+	<script src="js/bootstrap.bundle.min.js" defer></script>
+	<script src="js/dragons.js" defer></script>
+	<script src="js/site.js" defer></script>
+
+	<!-- https://ping-xiong.github.io/Dragons-Race-to-the-Edge-Interactive-Map-Backup/#/map -->
+<div class="modal fade hx-book" id="offcanvasWithBothOptions" tabindex="-1" aria-labelledby="offcanvasWithBothOptions-t" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+			<div class="modal-header"><h2 class="modal-title h4" id="offcanvasWithBothOptions-t">Como ser um viking</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div>
+			<div class="modal-body"><div class="hx-book__grid"><img class="hx-book__cover" src="img/livro-1.webp" alt="Capa de Como ser um viking" loading="lazy" decoding="async"><div>
 						<q><em>Vikings são corajosos.</em><br> Mas Hiccup não é como os outros vikings. Ele tem medo de
 							tudo... incluindo o mar. Quando Hiccup parte para sua primeira viagem oceânica, seu enjoo é
 							o menor dos seus problemas! Os vikings estão perdidos em uma terrível tempestade, e cabe a
@@ -306,17 +348,15 @@
 							<b>Número de páginas:</b> 32 páginas
 						</p>
 
-					</div>
-				</div>
-
-				<!-- Offcanvas LIVRO 2 httyd -->
-				<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1"
-					id="offcanvasWithBothOptions2" aria-labelledby="offcanvasWithBothOptionsLabel-2">
-					<div class="offcanvas-header">
-						<h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel-2">Como treinar o seu dragão</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					</div>
-					<div class="offcanvas-body">
+					</div></div></div>
+		</div>
+	</div>
+</div>
+<div class="modal fade hx-book" id="offcanvasWithBothOptions2" tabindex="-1" aria-labelledby="offcanvasWithBothOptions2-t" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+			<div class="modal-header"><h2 class="modal-title h4" id="offcanvasWithBothOptions2-t">Como treinar o seu dragão</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div>
+			<div class="modal-body"><div class="hx-book__grid"><img class="hx-book__cover" src="img/livro-2.webp" alt="Capa de Como treinar o seu dragão" loading="lazy" decoding="async"><div>
 						<q>No livro que começou tudo, Hiccup Horrendous Haddock III, o filho quieto e pensativo do Chefe
 							dos Hooligans Peludos, tenta passar no importante teste de iniciação de seu clã Viking,
 							capturando e treinando um dragão. Será que Hiccup consegue fazer isso sem ser despedaçado?
@@ -334,17 +374,15 @@
 							<b>Número de páginas:</b> 214 páginas
 						</p>
 
-					</div>
-				</div>
-
-				<!-- Offcanvas LIVRO 3 pirata -->
-				<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1"
-					id="offcanvasWithBothOptions3" aria-labelledby="offcanvasWithBothOptionsLabel-3">
-					<div class="offcanvas-header">
-						<h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel-3">Como ser um pirata</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					</div>
-					<div class="offcanvas-body">
+					</div></div></div>
+		</div>
+	</div>
+</div>
+<div class="modal fade hx-book" id="offcanvasWithBothOptions3" tabindex="-1" aria-labelledby="offcanvasWithBothOptions3-t" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+			<div class="modal-header"><h2 class="modal-title h4" id="offcanvasWithBothOptions3-t">Como ser um pirata</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div>
+			<div class="modal-body"><div class="hx-book__grid"><img class="hx-book__cover" src="img/livro-3.webp" alt="Capa de Como ser um pirata" loading="lazy" decoding="async"><div>
 						<p>Quando Soluço encontra um caixão no mar, ele o abre para descobrir um enigma que o levará ao
 							tesouro de Grimbeard, o Horrendo, o maior pirata do mundo e ancestral de Soluço. Assim,
 							Soluço e seus amigos partem em uma caça ao tesouro, determinados a dominar a arte da
@@ -362,17 +400,15 @@
 							<b>Número de páginas:</b> 240 páginas
 						</p>
 
-					</div>
-				</div>
-
-				<!-- Offcanvas LIVRO 4 dragones -->
-				<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1"
-					id="offcanvasWithBothOptions4" aria-labelledby="offcanvasWithBothOptionsLabel-4">
-					<div class="offcanvas-header">
-						<h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel-4">Como falar dragonês</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					</div>
-					<div class="offcanvas-body">
+					</div></div></div>
+		</div>
+	</div>
+</div>
+<div class="modal fade hx-book" id="offcanvasWithBothOptions4" tabindex="-1" aria-labelledby="offcanvasWithBothOptions4-t" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+			<div class="modal-header"><h2 class="modal-title h4" id="offcanvasWithBothOptions4-t">Como falar dragonês</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div>
+			<div class="modal-body"><div class="hx-book__grid"><img class="hx-book__cover" src="img/livro-4.webp" alt="Capa de Como falar dragonês" loading="lazy" decoding="async"><div>
 						<p>Haddock III era um incrível lutador de espadas, um sussurrador de dragões e o maior Herói
 							Viking que já existiu. Mas nem sempre foi assim. As memórias de Hiccup relembram quando ele
 							era apenas um garoto comum, e achava muito difícil ser um Herói. Subir em um navio romano de
@@ -392,19 +428,15 @@
 							<b>Número de páginas:</b> 240 páginas
 						</p>
 
-					</div>
-				</div>
-
-				<!-- Offcanvas LIVRO 5 maldição -->
-				<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1"
-					id="offcanvasWithBothOptions5" aria-labelledby="offcanvasWithBothOptionsLabel-5">
-					<div class="offcanvas-header">
-						<h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel-5">Como quebrar a maldição de um
-							dragão
-						</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					</div>
-					<div class="offcanvas-body">
+					</div></div></div>
+		</div>
+	</div>
+</div>
+<div class="modal fade hx-book" id="offcanvasWithBothOptions5" tabindex="-1" aria-labelledby="offcanvasWithBothOptions5-t" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+			<div class="modal-header"><h2 class="modal-title h4" id="offcanvasWithBothOptions5-t">Como quebrar a maldição de um dragão</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div>
+			<div class="modal-body"><div class="hx-book__grid"><img class="hx-book__cover" src="img/livro-5.webp" alt="Capa de Como quebrar a maldição de um dragão" loading="lazy" decoding="async"><div>
 						<q>Soluço e Camicazi, a herdeira da tribo das Ladras do Pântano, tentando encontrar uma cura
 							para Perna de Peixe, que pegou Vorpentite ,doença causada por picada de Vorpente-venenosa o
 							dragão com o veneno mais letal.</q>
@@ -420,18 +452,15 @@
 							<b>Número de páginas:</b> 214 páginas
 						</p>
 
-					</div>
-				</div>
-
-				<!-- Offcanvas LIVRO 6 twist -->
-				<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1"
-					id="offcanvasWithBothOptions6" aria-labelledby="offcanvasWithBothOptionsLabel-6">
-					<div class="offcanvas-header">
-						<h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel-6">Como mudar uma história de dragão
-						</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					</div>
-					<div class="offcanvas-body">
+					</div></div></div>
+		</div>
+	</div>
+</div>
+<div class="modal fade hx-book" id="offcanvasWithBothOptions6" tabindex="-1" aria-labelledby="offcanvasWithBothOptions6-t" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+			<div class="modal-header"><h2 class="modal-title h4" id="offcanvasWithBothOptions6-t">Como mudar uma história de dragão</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div>
+			<div class="modal-body"><div class="hx-book__grid"><img class="hx-book__cover" src="img/livro-6.webp" alt="Capa de Como mudar uma história de dragão" loading="lazy" decoding="async"><div>
 						<q>Com a ajuda do novo Guarda-peito de Soluço, o misterioso ex-herói Fabuloso Figurão, o Time
 							Soluço precisa devolver a Pedra de Fogo, que foi roubada, para o fumegante vulcão da Ilha
 							dos Lava-loucos. Além das ameaças da iminente erupção, a ilha guarda mais um segredo: por
@@ -450,19 +479,15 @@
 							<b>Número de páginas:</b> 214 páginas
 						</p>
 
-					</div>
-				</div>
-
-				<!-- Offcanvas LIVRO 7 heros -->
-				<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1"
-					id="offcanvasWithBothOptions7" aria-labelledby="offcanvasWithBothOptionsLabel-7">
-					<div class="offcanvas-header">
-						<h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel-7">O guia do herói para vencer
-							dragões mortais
-						</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					</div>
-					<div class="offcanvas-body">
+					</div></div></div>
+		</div>
+	</div>
+</div>
+<div class="modal fade hx-book" id="offcanvasWithBothOptions7" tabindex="-1" aria-labelledby="offcanvasWithBothOptions7-t" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+			<div class="modal-header"><h2 class="modal-title h4" id="offcanvasWithBothOptions7-t">O guia do herói para vencer dragões mortais</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div>
+			<div class="modal-body"><div class="hx-book__grid"><img class="hx-book__cover" src="img/livro-7.webp" alt="Capa de O guia do herói para vencer dragões mortais" loading="lazy" decoding="async"><div>
 						<q>Montados em um Dragão Furtivo, que Camicazi roubou de sua mãe, Bertha, que por sua vez, o
 							roubou de Insensato, o Chefe mais assustador de todo o mundo bárbaro, nossos improváveis
 							heróis partem para a Biblioteca Pública dos Cabeças-ocas, protegida pelo terrível
@@ -485,18 +510,15 @@
 							<b>Número de páginas:</b> 214 páginas
 						</p>
 
-					</div>
-				</div>
-
-				<!-- Offcanvas LIVRO 8 storm -->
-				<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1"
-					id="offcanvasWithBothOptions8" aria-labelledby="offcanvasWithBothOptionsLabel-8">
-					<div class="offcanvas-header">
-						<h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel-8">Como navegar em uma tempestade de
-							dragão</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					</div>
-					<div class="offcanvas-body">
+					</div></div></div>
+		</div>
+	</div>
+</div>
+<div class="modal fade hx-book" id="offcanvasWithBothOptions8" tabindex="-1" aria-labelledby="offcanvasWithBothOptions8-t" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+			<div class="modal-header"><h2 class="modal-title h4" id="offcanvasWithBothOptions8-t">Como navegar em uma tempestade de dragão</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div>
+			<div class="modal-body"><div class="hx-book__grid"><img class="hx-book__cover" src="img/livro-8.webp" alt="Capa de Como navegar em uma tempestade de dragão" loading="lazy" decoding="async"><div>
 						<q>A bordo do navio Sonho Americano 2, tripulado pela tribo dos Histéricos, Soluço Spantosicus
 							Strondus III, o desajeitado herdeiro da tribo dos Hooligans Cabeludos, precisa salvar não só
 							a sua pele e a de seus melhores amigos: o destino de todo o povo bárbaro está em suas mãos.
@@ -519,19 +541,15 @@
 							<b>Número de páginas:</b> 214 páginas
 						</p>
 
-					</div>
-				</div>
-
-				<!-- Offcanvas LIVRO 9 hearth -->
-				<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1"
-					id="offcanvasWithBothOptions9" aria-labelledby="offcanvasWithBothOptionsLabel-9">
-					<div class="offcanvas-header">
-						<h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel-9">Como partir o coração de um
-							dragão
-						</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					</div>
-					<div class="offcanvas-body">
+					</div></div></div>
+		</div>
+	</div>
+</div>
+<div class="modal fade hx-book" id="offcanvasWithBothOptions9" tabindex="-1" aria-labelledby="offcanvasWithBothOptions9-t" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+			<div class="modal-header"><h2 class="modal-title h4" id="offcanvasWithBothOptions9-t">Como partir o coração de um dragão</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div>
+			<div class="modal-body"><div class="hx-book__grid"><img class="hx-book__cover" src="img/livro-9.webp" alt="Capa de Como partir o coração de um dragão" loading="lazy" decoding="async"><div>
 						<q>Soluço Spantosicus Strondus III foi o mais grandioso herói já visto em todo o território
 							viking. Ele era bravo, impetuoso e muitíssimo inteligente. Mas até mesmo os grandes heróis
 							podem ter dificuldades no começo, principalmente se seu companheiro é um dragãozinho
@@ -554,18 +572,15 @@
 							<b>Número de páginas:</b> 214 páginas
 						</p>
 
-					</div>
-				</div>
-
-				<!-- Offcanvas LIVRO 10 sword -->
-				<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1"
-					id="offcanvasWithBothOptions10" aria-labelledby="offcanvasWithBothOptionsLabel-10">
-					<div class="offcanvas-header">
-						<h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel-10">Como roubar a espada de um dragão
-						</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					</div>
-					<div class="offcanvas-body">
+					</div></div></div>
+		</div>
+	</div>
+</div>
+<div class="modal fade hx-book" id="offcanvasWithBothOptions10" tabindex="-1" aria-labelledby="offcanvasWithBothOptions10-t" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+			<div class="modal-header"><h2 class="modal-title h4" id="offcanvasWithBothOptions10-t">Como roubar a espada de um dragão</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div>
+			<div class="modal-body"><div class="hx-book__grid"><img class="hx-book__cover" src="img/livro-10.webp" alt="Capa de Como roubar a espada de um dragão" loading="lazy" decoding="async"><div>
 						<q>Tempos difíceis se aproximam do Arquipélago Barbárico, e a salvação, novamente, está nas mãos
 							de Soluço Spantosicus Strondus III, o mais grandioso Herói Viking já visto, e de Banguela,
 							seu desobediente dragão de caça.
@@ -593,18 +608,15 @@
 							<b>Número de páginas:</b> 214 páginas
 						</p>
 
-					</div>
-				</div>
-
-				<!-- Offcanvas LIVRO 11 jewel -->
-				<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1"
-					id="offcanvasWithBothOptions11" aria-labelledby="offcanvasWithBothOptionsLabel-11">
-					<div class="offcanvas-header">
-						<h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel-11">Como pegar a joia do dragão
-						</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					</div>
-					<div class="offcanvas-body">
+					</div></div></div>
+		</div>
+	</div>
+</div>
+<div class="modal fade hx-book" id="offcanvasWithBothOptions11" tabindex="-1" aria-labelledby="offcanvasWithBothOptions11-t" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+			<div class="modal-header"><h2 class="modal-title h4" id="offcanvasWithBothOptions11-t">Como pegar a joia do dragão</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div>
+			<div class="modal-body"><div class="hx-book__grid"><img class="hx-book__cover" src="img/livro-11.webp" alt="Capa de Como pegar a joia do dragão" loading="lazy" decoding="async"><div>
 						<q>Soluço Spantosicus Strondus III está muito encrencado. A Rebelião dos Dragões começou. Alvin,
 							o Traiçoeiro, declarou-se Rei do Oeste Mais Selvagem por possuir oito das Dez Coisas
 							Perdidas do Rei. Malvado Melequento virou o novo Chefe da Tribo dos Hooligans Cabeludos
@@ -628,18 +640,15 @@
 							<b>Número de páginas:</b> 214 páginas
 						</p>
 
-					</div>
-				</div>
-
-				<!-- Offcanvas LIVRO 12 betray -->
-				<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1"
-					id="offcanvasWithBothOptions12" aria-labelledby="offcanvasWithBothOptionsLabel-12">
-					<div class="offcanvas-header">
-						<h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel-12">Como trair o herói de um dragão
-						</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					</div>
-					<div class="offcanvas-body">
+					</div></div></div>
+		</div>
+	</div>
+</div>
+<div class="modal fade hx-book" id="offcanvasWithBothOptions12" tabindex="-1" aria-labelledby="offcanvasWithBothOptions12-t" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+			<div class="modal-header"><h2 class="modal-title h4" id="offcanvasWithBothOptions12-t">Como trair o herói de um dragão</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div>
+			<div class="modal-body"><div class="hx-book__grid"><img class="hx-book__cover" src="img/livro-12.webp" alt="Capa de Como trair o herói de um dragão" loading="lazy" decoding="async"><div>
 						<q>Soluço Spantosicus Strondus III foi o mais grandioso Herói já visto em todo o território
 							Viking. Notável esgrimista e encantador de dragões, ele era corajoso, impetuoso e muitíssimo
 							inteligente. Mas até mesmo os grandes heróis podem ter dificuldades no começo,
@@ -660,18 +669,15 @@
 							<b>Número de páginas:</b> 214 páginas
 						</p>
 
-					</div>
-				</div>
-
-				<!-- Offcanvas LIVRO 13 fury -->
-				<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1"
-					id="offcanvasWithBothOptions13" aria-labelledby="offcanvasWithBothOptionsLabel-13">
-					<div class="offcanvas-header">
-						<h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel-13">Como enfrentar a fúria de um
-							dragão</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					</div>
-					<div class="offcanvas-body">
+					</div></div></div>
+		</div>
+	</div>
+</div>
+<div class="modal fade hx-book" id="offcanvasWithBothOptions13" tabindex="-1" aria-labelledby="offcanvasWithBothOptions13-t" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+			<div class="modal-header"><h2 class="modal-title h4" id="offcanvasWithBothOptions13-t">Como enfrentar a fúria de um dragão</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div>
+			<div class="modal-body"><div class="hx-book__grid"><img class="hx-book__cover" src="img/livro-13.webp" alt="Capa de Como enfrentar a fúria de um dragão" loading="lazy" decoding="async"><div>
 						<q>O emocionante desfecho da série Como treinar o seu dragão coloca frente a frente humanos e
 							dragões. Quem vai vencer a Batalha Final?
 
@@ -703,19 +709,15 @@
 							<b>Número de páginas:</b> 214 páginas
 						</p>
 
-					</div>
-				</div>
-
-				
-
-				<!-- Offcanvas LIVRO 15 book -->
-				<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1"
-					id="offcanvasWithBothOptions15" aria-labelledby="offcanvasWithBothOptionsLabel-14">
-					<div class="offcanvas-header">
-						<h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel-14">O livro completo dos dragões</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					</div>
-					<div class="offcanvas-body">
+					</div></div></div>
+		</div>
+	</div>
+</div>
+<div class="modal fade hx-book" id="offcanvasWithBothOptions15" tabindex="-1" aria-labelledby="offcanvasWithBothOptions15-t" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+			<div class="modal-header"><h2 class="modal-title h4" id="offcanvasWithBothOptions15-t">O livro completo dos dragões</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div>
+			<div class="modal-body"><div class="hx-book__grid"><img class="hx-book__cover" src="img/guiadasespecies.webp" alt="Capa de O livro completo dos dragões" loading="lazy" decoding="async"><div>
 						<q>Este guia é um item indispensável para os fãs da sériebest-seller do New York Times Como
 							Treinar o Seu Dragão, que inspirou o filme e a série de TV de sucesso. Este livro de
 							presente apresenta todas as espécies de dragões da série, além de novas espécies criadas
@@ -732,35 +734,10 @@
 							<b>Número de páginas:</b> 214 páginas
 						</p>
 
-					</div>
-				</div>
-
-
-			</main>
+					</div></div></div>
 		</div>
-
-
-
-	</article>
-
-
-	<footer>
-		<a class="icon-link icon-link-hover link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-			style="--bs-link-hover-color-rgb: 25, 135, 84;" href="#">
-			Voltar ao início
-			<svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true">
-				<path
-					d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-			</svg>
-		</a>
-		<p>Copyright &copy; Soju e Bacana 2025.</p>
-	</footer>
-
-	<script src="js/bootstrap.bundle.min.js" defer></script>
-	<script src="js/dragons.js" defer></script>
-	<script src="js/site.js" defer></script>
-
-	<!-- https://ping-xiong.github.io/Dragons-Race-to-the-Edge-Interactive-Map-Backup/#/map -->
+	</div>
+</div>
 </body>
 
 </html>
